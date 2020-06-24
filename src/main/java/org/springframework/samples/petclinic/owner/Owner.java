@@ -20,6 +20,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -63,6 +65,7 @@ public class Owner extends Person {
 	private Set<Pet> pets;
 
 	public String getAddress() {
+		System.out.println(new SimpleDateFormat("HH:mm:ss.SSS").format(new Date(System.currentTimeMillis())));
 		return this.address;
 	}
 
